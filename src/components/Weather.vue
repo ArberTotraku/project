@@ -40,7 +40,7 @@
   
   <style lang="scss" scoped>
   .weather-widget {
-    background-color: #007BFF; // A nicer shade of blue
+    background-color: #007BFF; 
     color: white;
     padding: 20px;
     border-radius: 8px;
