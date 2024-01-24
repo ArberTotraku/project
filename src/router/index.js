@@ -25,6 +25,10 @@ const router = createRouter(
                 component: () => import('../components/Todo.vue')
             },
             {
+                path: '/location',
+                component: () => import('../components/LocationDisplay.vue')
+            },
+            {
                 path: '/settings',
                 component: () => import('../components/Settings.vue')
             }

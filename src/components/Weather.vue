@@ -38,25 +38,73 @@
   };
   </script>
   
-  <style>
+  <style lang="scss" scoped>
   .weather-widget {
-
-    background-color: blue;
-    margin-top: 10%;
-    font-size: 1rem;
-    width: 400px;
-    height: 200px;
-    margin: 0 auto;
+    background-color: #007BFF; // A nicer shade of blue
     color: white;
-    margin: 0 auto;
-    margin-left: 300px
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5% auto;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  
+    h3 {
+      margin-bottom: 15px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+  
+      input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+  
+      .button {
+        padding: 10px;
+        background-color: #FF6347;
+        border-radius: 4px;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: darken(#FF6347, 10%);
+        }
+      }
+    }
+  
+    div {
+      margin-top: 20px;
+  
+      h4 {
+        margin-bottom: 10px;
+      }
+  
+      p {
+        margin: 5px 0;
+      }
+  
+      img {
+        margin-top: 10px;
+      }
+    }
   }
-  .button {color: white;
-background-color: tomato;
-width:130px;
-height: 30px;
-border-radius: 10px;
-margin-left: 5px;
-}
+  
+  @media (max-width: 600px) {
+    .weather-widget {
+      width: 95%;
+      padding: 15px;
+      margin-top: 10%;
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
   </style>
   

@@ -10,7 +10,7 @@
         apiKey: 'AIzaSyA82dU4xmMTgyOxZneV-NlKh23vLg4v28k', 
         location: {
           lat: 52.4704, 
-          lng: -13.3856,
+          lng: 13.3856,
         },
       };
     },

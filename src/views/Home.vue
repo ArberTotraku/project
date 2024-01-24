@@ -4,7 +4,7 @@ import Weather from '../components/Weather.vue';
 
 <main id="Home-page">
     <h1>Home</h1>
-<Weather/>
+<!-- <Weather/> -->
 </main>
 
 </template>
