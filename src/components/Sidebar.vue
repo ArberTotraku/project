@@ -1,5 +1,5 @@
 <template>
-   <aside :class=" `${is_expanded ? 'isexpanded':''}`  ">
+   <aside :class=" `${is_expanded ? 'is-expanded':''}`  ">
     
 <div class="logo">
     <!-- <img :src="logo" alt="Vue" /> -->
