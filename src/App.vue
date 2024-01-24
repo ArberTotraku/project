@@ -1,9 +1,15 @@
 
 <template>
 <div class="app">
+  <!-- Sidebar -->
 <Sidebar />
+
+
   <router-view />
+  
+
 </div>
+
 </template>
 
 <script setup>

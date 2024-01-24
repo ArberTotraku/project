@@ -1,8 +1,10 @@
+
+import Weather from '../components/Weather.vue';
 <template>
 
-<main class="home-page">
+<main id="Home-page">
     <h1>Home</h1>
-    <p>This is the home page</p>
+<Weather/>
 </main>
 
 </template>

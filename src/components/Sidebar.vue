@@ -30,6 +30,16 @@
 				<span class="material-icons">group</span>
 				<span class="text">Team</span>
 			</router-link>
+            <router-link to="/weather" class="button">
+				<span class="material-icons">sunny</span>
+				<span class="text">Weather</span>
+			</router-link>
+            
+            <router-link to="/todo" class="button">
+				<span class="material-icons">lists</span>
+				<span class="text">To do</span>
+			</router-link>
+
 
             <router-link to="/contact" class="button">
 				<span class="material-icons">email</span>
@@ -47,6 +57,8 @@
 		</div>
 
    </aside>
+   <Weather/>
+   <Todo/>
 </template>
 
 <script setup>
