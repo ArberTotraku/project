@@ -15,6 +15,10 @@ const router = createRouter(
                 path: '/about',
                 component: About
             },
+            {
+                path: '/team',
+                component: () => import('../components/Team.vue')
+            },
             
             {
                 path: '/weather',
