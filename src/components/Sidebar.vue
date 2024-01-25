@@ -51,8 +51,8 @@
             <span class="material-icons">payments</span>
             <span class="text">Budget</span>
         </router-link>
-        
     </div>
+
 
     <div class="flex"></div>
 
@@ -226,7 +226,7 @@ aside {
   }
 
   @media (max-width: 1024px) {
-    position: absolute;
+    position: fixed;
     z-index: 99;
   }
 }

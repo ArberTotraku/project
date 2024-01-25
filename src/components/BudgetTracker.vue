@@ -1,73 +1,45 @@
 <template>
-  <div class="budget-tracker">
-    <h2>Budget Tracker</h2>
-    <div class="inputs">
-      <div class="input-group">
-        <input type="number" v-model.number="newEarning" placeholder="Add Earning" />
-        <button @click="addEarning">Add</button>
-      </div>
-      <div class="input-group">
-        <input type="number" v-model.number="newExpense" placeholder="Add Expense" />
-        <select v-model="newExpenseCategory">
-          <option value="bills">Bills</option>
-          <option value="office">Office Expenses</option>
-        </select>
-        <button @click="addExpense">Add</button>
-      </div>
-    </div>
+   
     <div class="chart-container">
-      <canvas ref="budgetChart"></canvas>
+      <div class="buttons">
+        <button v-for="option in options" :key="option.label" @click="updateDataset(option.data)">
+          {{ option.label }}
+        </button>
+      </div>
+      <canvas id="responsiveChart"></canvas>
     </div>
-  </div>
-
   </template>
   
   <script>
-  import { ref, onMounted } from 'vue';
-  import Chart from 'chart.js/auto';
+  import { Chart, registerables } from 'chart.js';
+  Chart.register(...registerables);
   
   export default {
-    setup() {
-      const newEarning = ref(0);
-      const newExpense = ref(0);
-      const newExpenseCategory = ref('bills');
-      const earnings = ref([]);
-      const expenses = ref([]);
-      const budgetChartRef = ref(null);
-      let chart = null;
-  
-      const addEarning = () => {
-        earnings.value.push(newEarning.value);
-        newEarning.value = 0;
-        updateChart();
+    data() {
+      return {
+        chart: null,
+        options: [
+          { label: 'Sales', data: [5, 10, 5, 2, 20, 30, 45] },
+          { label: 'Expenses', data: [3, 7, 2, 9, 11, 25, 40] },
+          { label: 'Profit', data: [1, 3, 4, 8, 15, 22, 30] },
+        ],
       };
-  
-      const addExpense = () => {
-        expenses.value.push({ amount: newExpense.value, category: newExpenseCategory.value });
-        newExpense.value = 0;
-        newExpenseCategory.value = 'bills';
-        updateChart();
-      };
-  
-      const initChart = () => {
-        const ctx = budgetChartRef.value.getContext('2d');
-        chart = new Chart(ctx, {
-          type: 'bar',
+    },
+    mounted() {
+      this.initChart(this.options[0].data);
+    },
+    methods: {
+      initChart(dataSet) {
+        const ctx = document.getElementById('responsiveChart').getContext('2d');
+        this.chart = new Chart(ctx, {
+          type: 'line',
           data: {
-            labels: ['Earnings', 'Bills', 'Office Expenses'],
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [{
-              label: 'Budget Overview',
-              data: [0, 0, 0],
-              backgroundColor: [
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
-              ],
-              borderColor: [
-                'rgba(75, 192, 192, 1)',
-                'rgba(255,99,132,1)',
-                'rgba(255, 206, 86, 1)'
-              ],
+              label: 'Dataset',
+              data: dataSet,
+              backgroundColor: 'rgba(255, 99, 132, 0.2)',
+              borderColor: 'rgba(255, 99, 132, 1)',
               borderWidth: 1
             }]
           },
@@ -77,32 +49,36 @@
                 beginAtZero: true
               }
             },
-            maintainAspectRatio: false
+            maintainAspectRatio: false,
           }
         });
-      };
-  
-      const updateChart = () => {
-        const earningsTotal = earnings.value.reduce((acc, cur) => acc + cur, 0);
-        const billsTotal = expenses.value.filter(e => e.category === 'bills').reduce((acc, cur) => acc + cur.amount, 0);
-        const officeTotal = expenses.value.filter(e => e.category === 'office').reduce((acc, cur) => acc + cur.amount, 0);
-        
-        chart.data.datasets[0].data = [earningsTotal, billsTotal, officeTotal];
-        chart.update();
-      };
-  
-      onMounted(() => {
-        if (budgetChartRef.value) {
-          initChart();
-        }
-      });
-  
-      return { newEarning, newExpense, newExpenseCategory, earnings, expenses, addEarning, addExpense, budgetChartRef };
+      },
+      updateDataset(dataSet) {
+        this.chart.data.datasets[0].data = dataSet;
+        this.chart.update();
+      }
     }
   };
   </script>
   
   <style scoped>
-    /* CSS/SCSS code remains the same */
+
+  * {
+    margin-top: 40px;
+    
+  }
+  .chart-container {
+   
+    height: 15rem;
+    width: 20rem;
+    margin: auto;
+  }
+  
+  .buttons {
+    text-align: center;
+    margin-bottom: 10px;
+    margin: -10px;
+  }
+
   </style>
   

@@ -43,8 +43,11 @@ import BudgetTracker from '../components/BudgetTracker.vue';
 <style lang="scss">
 
 #Home-page {
+    margin-left: 1.5rem;
   padding: 20px;
-
+  text-align: center;
+  place-items: left;
+box-sizing: border-box;
   h1 {
     text-align: center;
     margin-bottom: 2rem;
