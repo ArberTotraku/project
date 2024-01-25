@@ -6,9 +6,7 @@
 </template>
 
 <script>
-export default {
-  name: "ContactCard",
-};
+
 </script>
 
 <style lang="scss" scoped>

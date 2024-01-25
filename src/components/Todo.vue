@@ -1,7 +1,7 @@
 <template>
     <div>
-      <h1>My To-Do List</h1>
-      <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Type enter to add">
+      <h3>My To-Do List</h3>
+      <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Press enter to add">
       <ul>
         <li v-for="todo in todos" :key="todo.id">
           {{ todo.title }}

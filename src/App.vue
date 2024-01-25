@@ -12,6 +12,11 @@
   </script>
   
   <style lang="scss">
+
+  body {
+    height: 100vh;
+   
+  }
   :root {
     --primary: #4ade80;
     --primary-alt: #22c55e;
@@ -27,6 +32,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Fira sans', sans-serif;
+
   }
   
   body {
