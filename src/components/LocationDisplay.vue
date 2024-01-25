@@ -18,7 +18,24 @@ export default {
     this.initMap();
   },
   methods: {
-    initMap() {
+  loadScript() {
+    return new Promise((resolve, reject) => {
+      if (typeof google !== "undefined") {
+        resolve();
+        return;
+      }
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${this.apiKey}`;
+      script.async = true;
+      script.defer = true;
+      script.onload = () => resolve();
+      script.onerror = (error) => reject(error);
+      document.head.appendChild(script);
+    });
+  },
+  async initMap() {
+    try {
+      await this.loadScript();
       const mapOptions = {
         zoom: 8,
         center: this.location,
@@ -28,16 +45,20 @@ export default {
         position: this.location,
         map: this.map,
       });
-    },
+    } catch (error) {
+      console.error("Google Maps script failed to load", error);
+    }
   },
+},
+
 };
 </script>
 
 <style scoped>
 
 .location-map{
-    max-width: fit-content;
-    max-height: fit-content;
+   width:  250px;
+  height: 250px;
 }
 
 </style>

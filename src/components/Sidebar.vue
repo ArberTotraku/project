@@ -33,7 +33,7 @@
 
       <router-link to="/todo" class="button">
         <span class="material-icons">lists</span>
-        <span class="text">To do</span>
+        <span class="text">To Do</span>
       </router-link>
 
       <router-link to="/contact" class="button">
