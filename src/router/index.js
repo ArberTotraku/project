@@ -33,6 +33,10 @@ const router = createRouter(
                 component: () => import('../components/LocationDisplay.vue')
             },
             {
+                path: '/budget',
+                component: () => import('../components/BudgetTracker.vue')
+            },
+            {
                 path: '/settings',
                 component: () => import('../components/Settings.vue')
             }

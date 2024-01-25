@@ -40,12 +40,18 @@
         <span class="material-icons">email</span>
         <span class="text">Contact</span>
       </router-link>
-    </div>
-    <div class="menu">
+      
       <router-link to="/location" class="button">
-        <span class="material-icons">location_on</span>
-        <span class="text">Location</span>
-      </router-link>
+          <span class="material-icons">location_on</span>
+          <span class="text">Location</span>
+        </router-link>
+        
+        
+        <router-link to="/budget" class="button">
+            <span class="material-icons">payments</span>
+            <span class="text">Budget</span>
+        </router-link>
+        
     </div>
 
     <div class="flex"></div>

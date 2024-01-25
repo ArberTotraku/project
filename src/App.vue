@@ -16,6 +16,7 @@
 
 import Sidebar from './components/Sidebar.vue';
 
+
 </script>
 
 <style lang="scss">
@@ -34,6 +35,7 @@ import Sidebar from './components/Sidebar.vue';
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Fira sans', sans-serif;
+
 }
 
 body {
