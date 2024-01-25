@@ -25,6 +25,10 @@ const router = createRouter(
                 component: () => import('../components/Weather.vue')
             },
             {
+                path: '/contact',
+                component: () => import('../components/Contact.vue')
+            },
+            {
                 path: '/todo',
                 component: () => import('../components/Todo.vue')
             },

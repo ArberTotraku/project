@@ -1,6 +1,6 @@
 <template>
     <div class="weather-widget">
-      <h3>Weather Information</h3>
+  
       <form @submit.prevent="fetchWeather">
         <input v-model="city" placeholder="Enter city name" />
         <button class="button" type="submit">Get Weather</button>
@@ -43,8 +43,8 @@
     // background-color: #007BFF; 
     color: black;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+
     margin: 5% auto;
     width: 90%;
     max-width: 400px;
@@ -67,7 +67,8 @@
   
       .button {
         padding: 10px;
-        background-color: #FF6347;
+        background-color: #4CAF50;
+        color: white;
         border-radius: 4px;
         margin-top: 5px;
         cursor: pointer;

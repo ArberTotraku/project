@@ -70,8 +70,8 @@
   .chart-container {
    
     height: 15rem;
-    width: 20rem;
-    margin: auto;
+    width: 18rem;
+    margin: 10px;
   }
   
   .buttons {

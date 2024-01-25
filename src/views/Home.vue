@@ -13,6 +13,11 @@
 <h3>Weather API</h3>
             <Weather/>
         </div>
+
+        <div class="contact">
+            <h3>Contact</h3>
+            <Contact/>
+        </div>
      
       <div class="todo">
         <h3>List of tasks</h3>
@@ -64,7 +69,7 @@ box-sizing: border-box;
     }
   }
 
-  .team, .weather, .todo, .location, .budget {
+  .team, .weather, .todo, .location, .budget, .contact{
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -72,6 +77,8 @@ box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    place-items: center;
+    
 
     h3 {
       margin-top: 0;
