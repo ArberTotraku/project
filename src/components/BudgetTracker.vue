@@ -1,5 +1,5 @@
 <template>
-   
+
     <div class="chart-container">
       <div class="buttons">
         <button v-for="option in options" :key="option.label" @click="updateDataset(option.data)">
@@ -9,11 +9,11 @@
       <canvas id="responsiveChart"></canvas>
     </div>
   </template>
-  
+
   <script>
   import { Chart, registerables } from 'chart.js';
   Chart.register(...registerables);
-  
+
   export default {
     data() {
       return {
@@ -60,23 +60,20 @@
     }
   };
   </script>
-  
+
   <style scoped>
 
 
   .chart-container {
-   margin: 0 auto;
     height: 15rem;
     width: 18rem;
-
-    /* margin: 10px; */
+padding: 10px;
   }
-  
+
   .buttons {
     text-align: center;
     margin-bottom: 10px;
- 
+
   }
 
   </style>
-  
