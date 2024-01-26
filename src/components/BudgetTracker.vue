@@ -63,10 +63,7 @@
   
   <style scoped>
 
-  * {
-    margin-top: 10px;
-    
-  }
+
   .chart-container {
    margin: 0 auto;
     height: 15rem;

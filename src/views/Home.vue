@@ -6,7 +6,7 @@
         <h3>Team members:</h3>
         <Team />
       </div>
-      <div class="weather">
+      <div class="weather" id="wetter">
         <h3>Weather API</h3>
         <Weather />
       </div>
@@ -69,6 +69,8 @@ import BudgetTracker from "../components/BudgetTracker.vue";
     }
   }
 
+
+
   .team,
   .weather,
   .todo,
@@ -83,6 +85,8 @@ import BudgetTracker from "../components/BudgetTracker.vue";
     flex-direction: column;
     gap: 10px;
     place-items: center;
+
+  
 
     h3 {
       margin-top: 0;
@@ -99,4 +103,5 @@ import BudgetTracker from "../components/BudgetTracker.vue";
     }
   }
 }
+
 </style>

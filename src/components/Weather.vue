@@ -39,6 +39,8 @@
   </script>
   
   <style lang="scss" scoped>
+
+
   .weather-widget {
     // background-color: #007BFF; 
     color: black;
@@ -57,6 +59,7 @@
     form {
       display: flex;
       flex-direction: column;
+      margin-left:40px;
   
       input {
         padding: 10px;
@@ -99,10 +102,11 @@
   
   @media (max-width: 600px) {
     .weather-widget {
+        margin: 0 auto;
       width: 95%;
       padding: 15px;
       margin-top: 10%;
-  
+//   margin-left: 5rem;
       h3 {
         font-size: 1.2rem;
       }
