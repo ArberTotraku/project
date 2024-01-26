@@ -49,7 +49,7 @@
     width: 90%;
     max-width: 400px;
     text-align: center;
-  
+//   margin-left: -10px;
     h3 {
       margin-bottom: 15px;
     }
@@ -102,6 +102,7 @@
       width: 95%;
       padding: 15px;
       margin-top: 10%;
+  
       h3 {
         font-size: 1.2rem;
       }

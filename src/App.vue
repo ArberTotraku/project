@@ -1,10 +1,10 @@
 <template>
   <div class="app">
     <!-- Sidebar -->
-    <div class="sidebar-new">
+  
 
       <Sidebar />
-    </div>
+  
 
 
     <router-view />

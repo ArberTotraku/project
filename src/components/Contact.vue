@@ -1,5 +1,6 @@
 <template>
   <div class="contact-card">
+    <h3>Contact </h3>
     <p>Name: Arber Totraku</p>
     <p>E-mail: arbertotraku@spacesquad.com</p>
   </div>
@@ -27,7 +28,7 @@ $hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 width: 3rem;
 height: 3rem;
 text-align: center;
-padding: 200px;
+padding: 150px;
   &:hover {
     box-shadow: $hover-shadow;
   }
