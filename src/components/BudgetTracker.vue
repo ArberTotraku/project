@@ -64,20 +64,21 @@
   <style scoped>
 
   * {
-    margin-top: 40px;
+    margin-top: 10px;
     
   }
   .chart-container {
-   
+   margin: 0 auto;
     height: 15rem;
     width: 18rem;
-    margin: 10px;
+
+    /* margin: 10px; */
   }
   
   .buttons {
     text-align: center;
     margin-bottom: 10px;
-    margin: -10px;
+ 
   }
 
   </style>
