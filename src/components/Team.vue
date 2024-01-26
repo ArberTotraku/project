@@ -100,7 +100,7 @@ export default {
           font-size: 1rem;
           margin-bottom: 10px;
    }
-    margin: 0 auto;
+    margin: 0 0 0 75px;
     .search-filter {
       display: flex;
       flex-wrap: wrap;
@@ -116,6 +116,7 @@ export default {
   
         @media (max-width: 400px) {
           width: 100%;
+        
         }
       }
     }

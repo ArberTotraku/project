@@ -86,7 +86,6 @@ import BudgetTracker from "../components/BudgetTracker.vue";
     gap: 10px;
     place-items: center;
 
-  
 
     h3 {
       margin-top: 0;

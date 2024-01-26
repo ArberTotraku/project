@@ -68,6 +68,7 @@
     height: 15rem;
     width: 18rem;
 padding: 10px;
+margin:0 0 0 75px;
   }
 
   .buttons {
