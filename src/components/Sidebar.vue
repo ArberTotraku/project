@@ -33,7 +33,7 @@
 
       <router-link to="/todo" class="button">
         <span class="material-icons">lists</span>
-        <span class="text">To Do</span>
+        <span class="text" id="todo">To do</span>
       </router-link>
 
       <router-link to="/contact" class="button">
@@ -81,7 +81,12 @@ const ToggleMenu = () => {
 </script>
 
 <style lang="scss" scoped>
+
+
 aside {
+
+ 
+
   display: flex;
   flex-direction: column;
 
@@ -98,6 +103,9 @@ aside {
   .flex {
     flex: 1 1 0%;
   }
+
+     
+
 
   .logo {
     margin-bottom: 1rem;
@@ -223,6 +231,8 @@ aside {
     .footer {
       opacity: 0;
     }
+
+   
   }
 
   @media (max-width: 1024px) {
@@ -230,4 +240,6 @@ aside {
     z-index: 99;
   }
 }
+
+
 </style>

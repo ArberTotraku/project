@@ -31,7 +31,6 @@
   }
   
   .menu .button {
-    /* Add your button styling here */
     cursor: pointer;
     display: flex;
     align-items: center;

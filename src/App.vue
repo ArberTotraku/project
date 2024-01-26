@@ -1,9 +1,14 @@
 <template>
   <div class="app">
     <!-- Sidebar -->
-    <Sidebar />
-  
+    <div class="sidebar-new">
+
+      <Sidebar />
+    </div>
+
+
     <router-view />
+
   </div>
   </template>
   
@@ -57,20 +62,25 @@
       background: var(--dark);
       padding: 2rem 1rem;
       overflow-y: auto;
+      margin-right: 1rem;
   
       @media (max-width: 768px) {
-        width: 60px; // Smaller width on mobile devices
+        width: 60px; 
       }
     }
+
+   
   
     main {
       flex: 1 1 0;
       margin-left: var(--sidebar-width);
       padding: 2rem;
       overflow-y: auto;
+
+   
   
       @media (max-width: 1024px) {
-        margin-left: 60px; // Adjust based on the smaller sidebar width on mobile
+        margin-left: 60px; 
       }
     }
   }

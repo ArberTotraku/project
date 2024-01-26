@@ -69,7 +69,7 @@ export default {
     },
     cancelEdit() {
       if (this.selectedMember.name === '' && this.selectedMember.role === '' && this.selectedMember.salary === 0) {
-        this.members.splice(this.editIndex, 1); // Remove the placeholder for new member
+        this.members.splice(this.editIndex, 1); 
       }
       this.selectedMember = { name: '', role: '', salary: 0 };
       this.editIndex = null;

@@ -12,13 +12,16 @@ Vielen Dank für die Aufmerksamkeit, fröhliches Programmieren und weniger Bugs!
     </template>
 
 <style>
+h1 {
+    margin-bottom: 1rem;
+}
 
 #about-page {
-    margin-left:0;
-align-items: center; 
-   text-align: center;
-}
-p {
-    text-align: center;
+
+
+
+    margin-left:0 auto;
+    padding: 30px;
+    /* margin-top: 10px; */
 }
 </style>
