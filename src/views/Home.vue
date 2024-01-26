@@ -48,7 +48,7 @@ import BudgetTracker from "../components/BudgetTracker.vue";
 #Home-page {
 
   
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   padding: 20px;
   text-align: center;
   place-items: left;
@@ -66,6 +66,8 @@ import BudgetTracker from "../components/BudgetTracker.vue";
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
+      max-width: 100%;
+      overflow-x: hidden;
     }
   }
 

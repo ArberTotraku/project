@@ -67,8 +67,8 @@
   .chart-container {
     height: 15rem;
     width: 18rem;
+margin-left:10px;
 padding: 10px;
-margin:0 0 0 75px;
   }
 
   .buttons {
@@ -77,4 +77,7 @@ margin:0 0 0 75px;
 
   }
 
+  #chartContainer {
+    margin:0 0 0 75px;
+  }
   </style>

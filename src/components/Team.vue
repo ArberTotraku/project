@@ -114,7 +114,7 @@ export default {
         border: 1px solid #ccc;
         border-radius: 4px;
   
-        @media (max-width: 400px) {
+        @media (max-width: 481px) {
           width: 100%;
         
         }
